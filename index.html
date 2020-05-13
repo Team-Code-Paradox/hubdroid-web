@@ -106,6 +106,33 @@
         (function(d, m){
           var kommunicateSettings = {
               "appId":"30f1d407501073bfa41700d37bedfd6de",
+              
+              "preLeadCollection": [{
+            "field": "Name", // Name of the field you want to add
+            "required": true, // Set 'true' to make it a mandatory field
+            "placeholder": "enter your name" // add whatever text you want to show in the placeholder
+        },
+        {
+            "field": "Email",
+            "type": "email",
+            "required": true,
+            "placeholder": "Enter your email"
+        },
+        {
+            "field": "Phone",
+            "type": "number",
+            "required": true,
+            "element": "input", // Optional field (Possible values: textarea or input) 
+            "placeholder": "Enter your phone number"
+        },
+        {
+            "field": "Employer", // You can add any number of custom properties
+            "required": true,
+            "element": "input",
+            "placeholder": "Enter employer name"
+        }
+    ],
+              
           "popupWidget":true,
           "automaticChatOpenOnNavigation":true,
            "openConversationOnNewMessage":true,   
