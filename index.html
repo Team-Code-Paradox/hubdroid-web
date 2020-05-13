@@ -125,19 +125,27 @@
             "element": "input", // Optional field (Possible values: textarea or input) 
             "placeholder": "Enter your phone number"
         },
-        {
-            "field": "Employer", // You can add any number of custom properties
-            "required": true,
-            "element": "input",
-            "placeholder": "Enter employer name"
-        }
-    ],
+      ],
               
           "popupWidget":true,
           "automaticChatOpenOnNavigation":true,
            "openConversationOnNewMessage":true,   
            "voiceInput":true,
-            "locShare":true  
+            "locShare":true,
+              "onInit": function () {
+        var events = {
+            'onMessageReceived': function (resp) {
+            console.log(resp);
+            //called when a new message is received
+            },
+            'onMessageSent': function (resp) {
+            console.log(resp);
+            //called when the message is sent
+            }
+        };
+        Kommunicate.subscribeToEvents(events);
+    }
+              
           };
           
           var s = document.createElement("script"); 
