@@ -1,2 +1,3 @@
-# StockHub-Web
-Web chatbot
+# Hubdroid Web
+
+Hubdroid bot implementation in Website
